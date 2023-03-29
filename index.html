@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Potofolio</title>
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-wrapper">
+        <div class="logo">
+          <a href="#"><span>MY</span> PORTOFOLIO</a>
+        </div>
+        <div class="navbar">
+          <ul class="list-navbar">
+            <li>
+              <a href="#about-me">Tentang Saya</a>
+            </li>
+            <li>
+              <a href="#project">Proyek Contoh</a>
+            </li>
+            <li>
+              <a href="#call-me">Hubungi Saya</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hamburger">
+          <a href=""><i class="fa fa-bars" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="#" class="wrapper">
+        <div class="container">
+          <div class="foto">
+            <img src="hero.jpg" />
+          </div>
+          <div class="about">
+            <h2 class="name">ALDIAN SYAHRONI</h2>
+            <p>Web Developer</p>
+            <p>&</p>
+            <p>Freelance</p>
+          </div>
+        </div>
+      </section>
+      <section id="about-me">
+        <div class="container">
+          <div class="about-me">
+            <h2>Tentang Saya</h2>
+            <p>
+              Saya adalah seorang Web Developer dan lulusan S1 Teknik
+              Informatika. Memiliki rasa ingin belajar yang tinggi,mampu
+              beradaptasi dengan hal baru, dapat bekerjasama secara tim maupun
+              individual, disiplin dan ulet. Saya sudah berkeluarga dan belum
+              memiliki seorang anak, tinggal di Bekasi tepatnya di daerah
+              Cikarang. Saya pernah bekerja diperusahaan ban mobil selama 11
+              Tahun dibagian Quality Assurance.
+            </p>
+          </div>
+          <div class="about-content">
+            <div class="academy">
+              <ul>
+                <h4>Academy</h4>
+                <li>SMPN 1 Cikarang Utara-Bekasi</li>
+                <li>SMK Trijaya Sakti Karawang (Teknik Mesin Industri)</li>
+                <li>STT Pelita Bangsa Cikarang-Bekasi (Teknik Informatika)</li>
+              </ul>
+            </div>
+            <div class="hard-skill">
+              <ul>
+                <h4>Hard Skills</h4>
+                <li>Mc.Office</li>
+                <li>HTML,CSS,JavaScrip</li>
+                <li>PC Building</li>
+              </ul>
+            </div>
+            <div class="experiance">
+              <ul>
+                <h4>Experiance</h4>
+                <li>PT.Hankook Tire Indonesia</li>
+                <li>Mini Course From RevoU</li>
+                <li>DTA Fresh Graduate Academy From Progate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="project">
+        <div class="container">
+          <div class="project">
+            <h2>Proyek Contoh</h2>
+            <div class="list-project">
+              <div class="project-slide fade">
+                <img class="img1" src="img1.jpg" alt="img1" />
+                <p>Build a Personal Computer</p>
+              </div>
+              <div class="project-slide fade">
+                <img
+                  class="img2"
+                  src="https://wallpaperaccess.com/full/1318313.jpg"
+                  alt="img2"
+                />
+                <p>Web online Travel Agent</p>
+              </div>
+              <div class="project-slide fade">
+                <img
+                  class="img3"
+                  src="https://media-cdn.tripadvisor.com/media/photo-p/10/fb/87/c3/kedai-kopi-kota.jpg"
+                  alt="img3"
+                />
+                <p>Web online Coffee Shop</p>
+              </div>
+              <a class="prev" onclick="updateSlide(-1)">&#10094;</a>
+              <a class="next" onclick="updateSlide(1)">&#10095;</a>
+            </div>
+          </div>
+        </div>
+        <script>
+          let slideIndex = 0;
+
+          const updateSlide = (n) => {
+            slideIndex += n;
+            showSlide(slideIndex);
+          };
+
+          const showSlide = (n) => {
+            const slides = document.getElementsByClassName("project-slide");
+            if (n > slides.length - 1) {
+              slideIndex = 0;
+            }
+            if (n < 0) {
+              slideIndex = slides.length - 1;
+            }
+            for (let i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+          };
+
+          showSlide(slideIndex);
+        </script>
+      </section>
+      <section id="call-me">
+        <div class="container">
+          <div class="call-me">
+            <h2>Hubungi Saya</h2>
+          </div>
+          <form
+            class="contact-me"
+            name="message-form"
+            onsubmit="return validation()"
+          >
+            <div class="person">
+              <i class="fa fa-user"></i>
+              <input name="name" placeholder="Full Name" type="text" />
+            </div>
+            <div class="person">
+              <i class="fa fa-envelope"></i>
+              <input name="email" placeholder="Your Email" type="text" />
+            </div>
+            <div class="person">
+              <i class="fa fa-phone"></i>
+              <input name="number" placeholder="Phone Numbers" type="text" />
+            </div>
+            <input class="send" type="submit" value="Send" />
+          </form>
+          <script>
+            function validation() {
+              var forminput =
+                ((name = document.forms["message-form"]["name"].value),
+                (email = document.forms["message-form"]["email"].value),
+                (number = document.forms["message-form"]["number"].value));
+
+              if ((forminput = name == "" || email == "" || number == "")) {
+                alert("Data tidak boleh kosong");
+              } else {
+                alert("Data Berhasil dikirim");
+                return false;
+              }
+            }
+          </script>
+        </div>
+      </section>
+      <div class="container">
+        <div class="faq">
+          <h3>FAQs</h3>
+          <button class="accordion">
+            Apakah saya dapat menghubungi anda ?<span>&#709;</span>
+          </button>
+          <div class="panel">
+            <p>
+              Ya tentu dengan mengubungi nomor whatsapp anda dapat menghubungi
+              saya
+            </p>
+          </div>
+
+          <button class="accordion">
+            Apakah saya dapat menemukan lokasi anda?<span>&#709;</span>
+          </button>
+          <div class="panel">
+            <p>
+              Tentu , anda dapat menemui saya pada lokasi yang ada di bagian
+              alamat.
+            </p>
+          </div>
+
+          <button class="accordion">
+            Apakah anda memiliki kontak pribadi ?<span>&#709;</span>
+          </button>
+          <div class="panel">
+            <p>Tentu saja karna itu sangat penting untuk saya.</p>
+          </div>
+          <script>
+            const accordion = document.getElementsByClassName("accordion");
+
+            for (let i = 0; i < accordion.length; i++) {
+              accordion[i].addEventListener("click", function () {
+                const panel = this.nextElementSibling;
+
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+          </script>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="sosmed">
+        <h6>Follow Us</h6>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-youtube"></i></a>
+      </div>
+      <div class="info">
+        <h6>Information Personal</h6>
+        <p>
+          <span><i class="fa fa-whatsapp"></i></span> 0895389721023
+        </p>
+        <p>
+          <span><i class="fa fa-map-marker"></i></span> Perum.Suryaland Blok F1
+          No.30 , Desa Kertamukti-Cibitung
+        </p>
+        <p>
+          <span><i class="fa fa-envelope"></i></span> aldhyan50@gmail.com
+        </p>
+      </div>
+      <div class="credit">
+        <p>created by <span>Aldian Syahroni</span> &copy 2023</p>
+      </div>
+    </footer>
+  </body>
+</html>

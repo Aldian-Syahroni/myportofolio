@@ -1,0 +1,73 @@
+@media screen and (max-width: 1000px) {
+  .list-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .name {
+    font-size: 25px;
+  }
+  .about p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+  .foto {
+    width: 50%;
+    height: 50%;
+    display: flex;
+  }
+  .foto img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-me p {
+    font-size: 15px;
+  }
+  .about-content {
+    font-size: 15px;
+  }
+  header {
+    font-size: 13px;
+    font-weight: 600;
+    padding-top: 5px;
+    height: 90px;
+  }
+  .list-navbar li {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .hamburger i {
+    font-size: 35px;
+    color: aliceblue;
+  }
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .call-me .contact-me {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+  }
+  .sosmed .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+  }
+}

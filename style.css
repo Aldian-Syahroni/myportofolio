@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+  background-color: #66347f;
+  height: 70px;
+  width: 100%;
+  /* Ubah position ke fixed, dan top ke 0 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Ubah z-index ke 10 */
+  z-index: 10;
+  font-weight: 600;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+.hamburger {
+  display: none;
+}
+.wrapper {
+  background-image: url(https://images8.alphacoders.com/903/903481.jpg);
+  background-size: cover;
+}
+.top-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #c9eeff;
+}
+.logo span {
+  color: #ede9d5;
+}
+.name {
+  font-size: 35px;
+  color: #ffffff;
+}
+.about p {
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 800;
+  color: #ede9d5;
+}
+.list-navbar li {
+  list-style: none;
+  padding-right: 2rem;
+}
+.list-navbar li a {
+  text-decoration: none;
+  color: #c9eeff;
+}
+.logo {
+  display: flex;
+  margin: 1rem 2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.list-navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.3rem 1rem;
+}
+.foto {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 10rem;
+}
+.foto img {
+  border-radius: 100%;
+  border: 1px solid white;
+  width: 100%;
+  height: 250px;
+}
+.about-me h2 {
+  margin-bottom: 3rem;
+  margin-top: 3.5rem;
+}
+.about-me p {
+  line-height: 2;
+}
+.about-me {
+  background-color: #62cdff;
+  height: 380px;
+  margin-top: 40px;
+}
+.about-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+.academy {
+  background-color: #4e6e81;
+  padding-right: 30px;
+  border-radius: 10px;
+  color: aliceblue;
+  margin-right: 2rem;
+}
+.hard-skill {
+  background-color: #898121;
+  padding-right: 30px;
+  border-radius: 10px;
+  color: aliceblue;
+  margin-right: 2rem;
+}
+.experiance {
+  background-color: #df2e38;
+  padding-right: 30px;
+  border-radius: 10px;
+  color: aliceblue;
+}
+.academy ul li {
+  display: flex;
+  justify-content: left;
+  padding-bottom: 5px;
+}
+.hard-skill ul li {
+  display: flex;
+  justify-content: left;
+  padding-bottom: 5px;
+}
+.experiance ul li {
+  display: flex;
+  justify-content: left;
+  padding-bottom: 5px;
+}
+.project {
+  margin-top: 5rem;
+}
+.project h2 {
+  margin-bottom: 5rem;
+}
+.list-project {
+  display: flex;
+  justify-content: center;
+}
+.list-project img {
+  width: 70%;
+  height: 300px;
+  object-fit: contain;
+}
+.project-slide {
+  display: none;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 1890px;
+  left: 33%;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+}
+
+/* Animasi */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.contact-me {
+  width: 560px;
+  height: 300px;
+  border: 1px solid #cbe4de;
+  background-color: #cbe4de;
+  border-radius: 15px;
+  margin-top: 35px;
+}
+.person input {
+  margin-top: 30px;
+  margin-left: 20px;
+  padding-left: 10px;
+  width: 70%;
+  height: 40px;
+}
+.call-me {
+  margin-top: 70px;
+}
+.contact-me .send {
+  height: 50px;
+  width: 200px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: #66347f;
+  color: white;
+  border-color: white;
+  cursor: pointer;
+}
+.send:hover {
+  background-color: black;
+  color: #c9eeff;
+}
+.faq {
+  margin-top: 30px;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #66347f;
+}
+.sosmed a {
+  font-size: 20px;
+  margin-left: 20px;
+  padding-right: 5px;
+  color: #ede9d5;
+}
+.info {
+  padding-left: 100px;
+}
+.info h6 {
+  font-size: 15px;
+}
+.info p {
+  font-size: 14px;
+}
+.info i {
+  color: #ede9d5;
+}
+.credit p {
+  font-size: 13px;
+  margin-right: 20px;
+}
+.credit span {
+  color: white;
+}
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+.accordion {
+  position: relative;
+  background-color: #eee;
+  background: none;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px #ccc solid;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.accordion:hover {
+  background-color: black;
+  color: white;
+}
+
+.panel {
+  display: none;
+  padding: 0 10px;
+  background-color: white;
+  font-size: 12px;
+  text-align: left;
+}
+.accordion span {
+  float: right;
+}
